@@ -26,14 +26,18 @@ export function ExperienceItem({ className, ...item }: ExperienceItemProps) {
             showLinkInTitle={item.options?.showLinkInTitle}
             className="section-item-title experience-item-title"
           />
-          <span className="section-item-metadata experience-item-location shrink-0 text-end">{item.location}</span>
+          <span className="section-item-metadata experience-item-period shrink-0 text-end">
+              {item.period}
+          </span>
         </div>
 
         {/* Row 2: Position + Period */}
         {(!hasRoles || item.position) && (
           <div className="flex items-start justify-between gap-x-2">
             <span className="section-item-metadata experience-item-position">{item.position}</span>
-            <span className="section-item-metadata experience-item-period shrink-0 text-end">{item.period}</span>
+            <span className="section-item-metadata experience-item-location shrink-0 text-end">
+              {item.location}
+            </span>
           </div>
         )}
 
